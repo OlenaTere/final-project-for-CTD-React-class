@@ -1,0 +1,28 @@
+.page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius, 8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.page h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.page p,
+.page li {
+  font-size: 1rem;
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+.page ul {
+  padding-left: 1.25rem;
+  max-width: 600px;
+}

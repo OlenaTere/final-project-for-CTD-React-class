@@ -1,12 +1,15 @@
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', Arial, sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--primary-color);
 }
 
-.kanban-board {
+.task-board {
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
@@ -35,7 +38,7 @@ h1, h2, h3 {
 }
 
 .status-todo {
-  color: #0074D9;
+  color: #0074d9;
 }
 .status-inprogress {
   color: orange;
@@ -47,7 +50,7 @@ h1, h2, h3 {
 .btn {
   padding: 0.5em 1em;
   border: none;
-  background: #0074D9;
+  background: #0074d9;
   color: #fff;
   border-radius: 4px;
   font-weight: 600;

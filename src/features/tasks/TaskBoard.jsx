@@ -1,15 +1,16 @@
 import { useCallback } from "react";
 import TaskColumn from "./TaskColumn";
 import TaskForm from "./TaskForm";
+import "./TaskBoard.css";
 
 const STATUSES = ["todo", "inprogress", "done"];
 
 export default function TaskBoard({ tasks, setTasks, teamMembers }) {
-    console.log("tasks passed to TaskBoard:", tasks);
+  console.log("tasks passed to TaskBoard:", tasks);
   // Controlled Add Task handler (example)
   const handleAddTask = useCallback(
     async (task) => {
-        console.log("Adding task:", task);
+      console.log("Adding task:", task);
       try {
         // POST new task to Airtable
         const res = await fetch(
@@ -28,7 +29,7 @@ export default function TaskBoard({ tasks, setTasks, teamMembers }) {
                 status: task.status,
               },
             }),
-          }
+          },
         );
         if (!res.ok) throw new Error("Failed to add task to Airtable");
         const data = await res.json();
@@ -47,27 +48,27 @@ export default function TaskBoard({ tasks, setTasks, teamMembers }) {
         alert("Error adding task: " + err.message);
       }
     },
-    [setTasks]
+    [setTasks],
   );
 
   const handleDeleteTask = useCallback(
     (id) => {
       // Also DELETE from Airtable in real code
-      setTasks(prev => prev.filter(task => task.id !== id));
+      setTasks((prev) => prev.filter((task) => task.id !== id));
     },
-    [setTasks]
+    [setTasks],
   );
 
   return (
     <div className="board-page">
-      <h1>Task Board</h1>
+      <h1>Team Chart</h1>
       <TaskForm onAdd={handleAddTask} teamMembers={teamMembers} />
-      <div className="kanban-board">
-        {STATUSES.map(status => (
+      <div className="task-board">
+        {STATUSES.map((status) => (
           <TaskColumn
             key={status}
             status={status}
-            tasks={tasks.filter(t => t.status === status)}
+            tasks={tasks.filter((t) => t.status === status)}
             onTaskDelete={handleDeleteTask}
           />
         ))}

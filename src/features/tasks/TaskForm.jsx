@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../../shared/Button";
+import "./TaskForm.css";
 
 export default function TaskForm({ onAdd, teamMembers }) {
   const [title, setTitle] = useState("");
@@ -29,7 +30,7 @@ export default function TaskForm({ onAdd, teamMembers }) {
         <input
           id="title"
           value={title}
-          onChange={e => setTitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           required
         />
       </div>
@@ -38,11 +39,13 @@ export default function TaskForm({ onAdd, teamMembers }) {
         <select
           id="assignee"
           value={assignee}
-          onChange={e => setAssignee(e.target.value)}
+          onChange={(e) => setAssignee(e.target.value)}
         >
           <option value="">--Select--</option>
-          {teamMembers.map(name => (
-            <option value={name} key={name}>{name}</option>
+          {teamMembers.map((name) => (
+            <option value={name} key={name}>
+              {name}
+            </option>
           ))}
         </select>
       </div>
@@ -52,7 +55,7 @@ export default function TaskForm({ onAdd, teamMembers }) {
           id="dueDate"
           type="date"
           value={dueDate}
-          onChange={e => setDueDate(e.target.value)}
+          onChange={(e) => setDueDate(e.target.value)}
         />
       </div>
       <div>
@@ -60,7 +63,7 @@ export default function TaskForm({ onAdd, teamMembers }) {
         <select
           id="status"
           value={status}
-          onChange={e => setStatus(e.target.value)}
+          onChange={(e) => setStatus(e.target.value)}
         >
           <option value="todo">To Do</option>
           <option value="inprogress">In Progress</option>

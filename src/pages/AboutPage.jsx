@@ -1,10 +1,12 @@
+import "./AboutPage.css";
+
 export default function AboutPage() {
   return (
-    <div style={{ padding: "2rem" }}>
+    <div className="page">
       <h1>About TeamChart</h1>
       <p>
-        <b>TeamChart</b> is a simple and intuitive task assignment board for teams.<br />
-        It was built with React and demonstrates best practices in state management, routing, and UI organization.
+        <b>TeamChart</b> is a simple and intuitive task assignment board for
+        Teams.
       </p>
       <ul>
         <li>
@@ -17,7 +19,8 @@ export default function AboutPage() {
           </ul>
         </li>
         <li>
-          <b>How it works:</b> All data is stored securely in your own Airtable base. Team members can collaborate and keep track of their work in real time.
+          <b>How it works:</b> All data is stored securely in your own Airtable
+          base.
         </li>
       </ul>
       <p>

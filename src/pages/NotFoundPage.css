@@ -1,0 +1,32 @@
+.not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  font-size: 1rem;
+}
+
+.back-home-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius, 6px);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.back-home-btn:hover {
+  background-color: var(--hover-color);
+}

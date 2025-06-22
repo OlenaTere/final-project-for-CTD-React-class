@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { Routes, Route, NavLink } from "react-router";
 import HomePage from "./pages/HomePage";
 import BoardPage from "./pages/BoardPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
-
+import Header from "./shared/Header";
 
 const initialTeamMembers = ["Daisy", "Johanna", "Anna"];
 
@@ -52,7 +52,7 @@ function App() {
             headers: {
               Authorization: `Bearer ${import.meta.env.VITE_AIRTABLE_TOKEN}`,
             },
-          }
+          },
         );
         if (!res.ok) throw new Error("Failed to fetch tasks from Airtable");
         const data = await res.json();
@@ -77,15 +77,12 @@ function App() {
   }, []);
 
   if (loading) return <div style={{ padding: "2rem" }}>Loading tasks…</div>;
-  if (error) return <div style={{ color: "red", padding: "2rem" }}>{error}</div>;
+  if (error)
+    return <div style={{ color: "red", padding: "2rem" }}>{error}</div>;
 
   return (
     <div>
-      <nav>
-        <NavLink to="/" end>Home</NavLink> |{" "}
-        <NavLink to="/board">Board</NavLink> |{" "}
-        <NavLink to="/about">About</NavLink>
-      </nav>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -98,7 +95,7 @@ function App() {
             />
           }
         />
-        
+
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

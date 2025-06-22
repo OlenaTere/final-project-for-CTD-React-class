@@ -1,0 +1,44 @@
+.task-form {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: var(--radius, 8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.task-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.task-form input,
+.task-form select {
+  padding: 0.5rem;
+  border: 1px solid #d0d0d0;
+  border-radius: var(--radius, 6px);
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  background-color: #fff;
+}
+
+.task-form .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}

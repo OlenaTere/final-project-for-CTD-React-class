@@ -1,0 +1,27 @@
+.board-page {
+  padding: 2rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.board-page h1 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.task-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
