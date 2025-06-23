@@ -18,9 +18,6 @@ export default function HomePage() {
         <li>
           <b>Track</b> progress by moving tasks between columns
         </li>
-        <li>
-          <b>Filter</b> and view tasks by assignee or due date
-        </li>
       </ul>
       <p>
         To get started, select <b>Board</b> from the navigation menu!

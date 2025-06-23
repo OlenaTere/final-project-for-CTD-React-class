@@ -8,30 +8,6 @@ import Header from "./shared/Header";
 
 const initialTeamMembers = ["Daisy", "Johanna", "Anna"];
 
-// const initialTasks = [
-//   {
-//     id: "1",
-//     title: "Design the homepage",
-//     assignee: "Daisy",
-//     dueDate: "2025-08-20",
-//     status: "todo", // options: "todo", "inprogress", "done"
-//   },
-//   {
-//     id: "2",
-//     title: "Set up backend API",
-//     assignee: "Johanna",
-//     dueDate: "2025-08-21",
-//     status: "inprogress",
-//   },
-//   {
-//     id: "3",
-//     title: "Write user docs",
-//     assignee: "Anna",
-//     dueDate: "2025-08-22",
-//     status: "done",
-//   },
-// ];
-
 function App() {
   console.log("BASE:", import.meta.env.VITE_AIRTABLE_BASE);
   console.log("TABLE:", import.meta.env.VITE_AIRTABLE_TABLE);
@@ -56,7 +32,7 @@ function App() {
         );
         if (!res.ok) throw new Error("Failed to fetch tasks from Airtable");
         const data = await res.json();
-        // Map Airtable's response to your task structure
+        // Map Airtable's response to the task structure
         const mapped = data.records.map((r) => ({
           id: r.id,
           title: r.fields.title || "",

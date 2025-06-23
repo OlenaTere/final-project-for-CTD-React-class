@@ -1,12 +1,11 @@
 :root {
-  /* Core warm palette */
-  --primary-color: #9550ef; /* Chocolate brown  #5d4037 */
-  --hover-color: #3e2723; /* Dark chocolate */
-  --highlight-color: #9550ef; /* Muted warm taupe for accents #8d6e63 */
-  --success-color: #6d9c6d; /* Earthy green */
-  --info-color: #a1887f; /* Warm gray/tan */
+  --primary-color: #9550ef; 
+  --hover-color: #3e2723; 
+  --highlight-color: #9550ef; 
+  --success-color: #6d9c6d; 
+  --info-color: #a1887f; 
 
-  --bg-light: #f3f0ed; /* Very soft beige */
+  --bg-light: #f3f0ed;
   --card-bg: rgba(255, 255, 255, 0.8);
   --text-color: #2e2e2e;
   --muted-text: #777;
@@ -23,7 +22,6 @@
 
 body {
   font-family: var(--font-body);
-  /* background-color: #fff; */
   background-image: url("./assets/backgroud.jpg");
   background-size: cover;
   background-position: center;
